@@ -1,0 +1,9 @@
+//身份证号脱敏处理
+         function onIdcard(e) {
+             var idcard = e.value;
+             //身份证号为15位或18位时，隐藏7到14位,显示*号
+             if (idcard.length == 15 || idcard.length == 18) {
+                 idcard = idcard.replace(idcard.substring(6, 14), "********");
+             }
+            return e.cellHtml = idcard;
+         }
